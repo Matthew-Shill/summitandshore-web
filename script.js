@@ -77,6 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
     '.markets-area-card',
     '.philosophy-content',
     '.revenue-standalone .revenue-content',
+    '.service-pillar',
+    '.services-philosophy',
+    '.presentation-editorial',
+    '.presentation-lead',
+    '.presentation-hero-content',
   ];
 
   animateSelectors.forEach((selector) => {
