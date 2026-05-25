@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Summit & Shore — boutique short-term rental management in the Finger Lakes. Local expertise backed by institutional-grade systems to unlock the true value of your property.">
+  <title>Summit & Shore | Finger Lakes Short-Term Rental Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="" class="logo-img" width="48" height="48">
+        <span class="logo-text">Summit & Shore</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="markets.html">Markets &amp; Stays</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#calculator">Property Revenue Evaluation</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary nav-cta">Get Evaluation</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img
+        src="images/hero.jpg"
+        alt="Lakefront vacation rental overlooking Canandaigua Lake at sunset, Finger Lakes wine country"
+        loading="eager"
+      >
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <p class="hero-eyebrow">Finger Lakes Luxury Property Management</p>
+      <h1>Unlock the True Value<br>of Your Property</h1>
+      <p class="hero-subtitle">Boutique short-term rental management combining local Finger Lakes expertise with elite operational systems.</p>
+      <div class="hero-actions">
+        <a href="#calculator" class="btn btn-primary btn-lg">Free Property Revenue Evaluation</a>
+        <a href="#contact" class="btn btn-outline btn-lg">Book a Call</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll to explore</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <section class="intro section" id="advantage">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-content">
+          <span class="section-label">The Strategic Advantage</span>
+          <h2>Institutional-Grade Management. Local Care.</h2>
+          <p>We've partnered with experienced operators in established vacation rental markets to bring institutional-level management practices to the Finger Lakes. Our company was built using proven revenue management, guest experience, and operations systems already validated across dozens of successful properties.</p>
+          <p class="intro-detail">We bring institutional-grade systems and strategic advisory support directly to the Finger Lakes market, ensuring your investment is managed with elite precision.</p>
+          <a href="#contact" class="btn btn-primary">Analyze My Property</a>
+        </div>
+        <div class="intro-image">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Geneva%2C_New_York_-_19_-_Finger_Lakes_Welcome_Center_-_20220810_-_terrace_and_lakeshore.jpg?width=1280" alt="Seneca Lake shoreline at Geneva, Finger Lakes, New York" loading="lazy" referrerpolicy="no-referrer">
+        </div>
+      </div>
+
+      <div class="pillars-grid">
+        <article class="pillar-card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <h3>Operational Excellence</h3>
+          <p>Proven hospitality systems that maximize occupancy and guest satisfaction.</p>
+        </article>
+        <article class="pillar-card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3>Boutique Staging &amp; Marketing</h3>
+          <p>High-end property presentation tailored to luxury travelers.</p>
+        </article>
+        <article class="pillar-card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Local Expertise</h3>
+          <p>Ground-level management rooted right here in the Finger Lakes region.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="owner-services section section-alt" id="owner-services">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-label">Our Services</span>
+        <h2>What Summit &amp; Shore Handles for Owners</h2>
+        <p>A clean, comprehensive breakdown of full-service management — so you can enjoy passive income without the day-to-day workload.</p>
+      </div>
+      <div class="owner-services-grid">
+        <article class="owner-service-card">
+          <div class="owner-service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Full-Service Management</h3>
+          <p>Guest communication, 24/7 support, dynamic pricing, and booking optimization.</p>
+        </article>
+        <article class="owner-service-card">
+          <div class="owner-service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3>Luxury Staging &amp; Interior Design</h3>
+          <p>Elevating your space to command premium nightly rates.</p>
+        </article>
+        <article class="owner-service-card">
+          <div class="owner-service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Five-Star Cleaning &amp; Maintenance</h3>
+          <p>Rigorous turnarounds to keep your property in pristine condition.</p>
+        </article>
+      </div>
+      <p class="owner-services-more"><a href="services.html">Explore full-service operations &rarr;</a></p>
+    </div>
+  </section>
+
+  <section class="revenue section section-dark" id="calculator">
+    <div class="container">
+      <div class="calculator-intro">
+        <span class="section-label">Property Revenue Evaluation</span>
+        <h2>Estimate Your Finger Lakes Rental Revenue</h2>
+        <p>See how much your lakefront or countryside property could earn as a short-term rental. Adjust the inputs below for a personalized projection — then compare self-management vs. professional co-hosting with Summit &amp; Shore.</p>
+      </div>
+
+      <div class="revenue-stats-row">
+        <div class="revenue-stat">
+          <span class="stat-number">20–30%</span>
+          <span class="stat-label">Average revenue increase with our management</span>
+        </div>
+        <div class="revenue-stat">
+          <span class="stat-number">Top 5–10%</span>
+          <span class="stat-label">Listing performance target</span>
+        </div>
+        <div class="revenue-stat">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Guest response &amp; support</span>
+        </div>
+      </div>
+
+      <div class="calculator-panel">
+        <form class="calculator-form" id="propertyCalculator" novalidate>
+          <h3>Your Property Details</h3>
+
+          <div class="calc-field">
+            <label for="calcMarket">Market / Location</label>
+            <select id="calcMarket" name="market" required>
+              <option value="seneca">Seneca Lake</option>
+              <option value="cayuga">Cayuga Lake</option>
+              <option value="keuka">Keuka Lake</option>
+              <option value="canandaigua">Canandaigua Lake</option>
+              <option value="skaneateles">Skaneateles Lake</option>
+              <option value="owasco">Owasco Lake</option>
+              <option value="wine">Wine Country (Inland)</option>
+              <option value="countryside">Countryside / Rural</option>
+            </select>
+          </div>
+
+          <div class="calc-row">
+            <div class="calc-field">
+              <label for="calcBedrooms">Bedrooms</label>
+              <select id="calcBedrooms" name="bedrooms">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6+</option>
+              </select>
+            </div>
+            <div class="calc-field">
+              <label for="calcBathrooms">Bathrooms</label>
+              <select id="calcBathrooms" name="bathrooms">
+                <option value="1">1</option>
+                <option value="1.5">1.5</option>
+                <option value="2" selected>2</option>
+                <option value="2.5">2.5</option>
+                <option value="3">3</option>
+                <option value="4">4+</option>
+              </select>
+            </div>
+          </div>
+
+          <fieldset class="calc-amenities">
+            <legend>Property Features</legend>
+            <label class="calc-check">
+              <input type="checkbox" id="calcLakefront" name="lakefront">
+              <span>Lakefront / Direct water access</span>
+            </label>
+            <label class="calc-check">
+              <input type="checkbox" id="calcDock" name="dock">
+              <span>Private dock or beach</span>
+            </label>
+            <label class="calc-check">
+              <input type="checkbox" id="calcHotTub" name="hotTub">
+              <span>Hot tub</span>
+            </label>
+            <label class="calc-check">
+              <input type="checkbox" id="calcFirePit" name="firePit">
+              <span>Fire pit &amp; outdoor living</span>
+            </label>
+          </fieldset>
+
+          <div class="calc-slider-field">
+            <div class="calc-slider-header">
+              <label for="calcOccupancy">Occupancy Rate</label>
+              <span class="calc-slider-value" id="calcOccupancyValue">58%</span>
+            </div>
+            <input type="range" id="calcOccupancy" name="occupancy" min="30" max="85" value="58" step="1">
+            <p class="calc-hint">Finger Lakes properties typically range 45–70% annually depending on location and seasonality.</p>
+          </div>
+
+          <div class="calc-slider-field">
+            <div class="calc-slider-header">
+              <label for="calcNightlyRate">Average Nightly Rate</label>
+              <span class="calc-slider-value" id="calcNightlyRateValue">$245</span>
+            </div>
+            <input type="range" id="calcNightlyRate" name="nightlyRate" min="75" max="750" value="245" step="5">
+            <p class="calc-hint">Estimated from your market, size, and amenities. Adjust to match your expectations.</p>
+          </div>
+
+          <div class="calc-slider-field">
+            <div class="calc-slider-header">
+              <label for="calcAvgStay">Average Length of Stay</label>
+              <span class="calc-slider-value" id="calcAvgStayValue">3.2 nights</span>
+            </div>
+            <input type="range" id="calcAvgStay" name="avgStay" min="2" max="7" value="3.2" step="0.1">
+          </div>
+
+          <button type="button" class="calc-reset btn btn-outline btn-sm" id="calcReset">Reset to market estimate</button>
+        </form>
+
+        <div class="calculator-results" id="calculatorResults">
+          <h3>Your Revenue Projection</h3>
+
+          <div class="calc-result-primary">
+            <span class="calc-result-label">Estimated Gross Annual Revenue</span>
+            <span class="calc-result-amount" id="resultGrossAnnual">$51,884</span>
+            <span class="calc-result-sub" id="resultGrossMonthly">≈ $4,324 / month</span>
+          </div>
+
+          <div class="calc-result-grid">
+            <div class="calc-result-item">
+              <span class="calc-result-item-label">Booked Nights</span>
+              <span class="calc-result-item-value" id="resultBookedNights">212</span>
+            </div>
+            <div class="calc-result-item">
+              <span class="calc-result-item-label">Avg. Nightly Rate</span>
+              <span class="calc-result-item-value" id="resultNightlyRate">$245</span>
+            </div>
+            <div class="calc-result-item">
+              <span class="calc-result-item-label">Occupancy</span>
+              <span class="calc-result-item-value" id="resultOccupancy">58%</span>
+            </div>
+            <div class="calc-result-item">
+              <span class="calc-result-item-label">Est. Reservations</span>
+              <span class="calc-result-item-value" id="resultReservations">66</span>
+            </div>
+          </div>
+
+          <div class="calc-comparison">
+            <div class="calc-comparison-card calc-comparison-self">
+              <h4>Self-Managed Estimate</h4>
+              <p class="calc-comparison-amount" id="resultSelfNet">$38,913</p>
+              <p class="calc-comparison-note">After platform fees, cleaning &amp; upkeep</p>
+              <ul class="calc-breakdown" id="resultSelfBreakdown"></ul>
+            </div>
+            <div class="calc-comparison-card calc-comparison-managed highlight">
+              <h4>With Summit &amp; Shore</h4>
+              <p class="calc-comparison-amount" id="resultManagedNet">$50,456</p>
+              <p class="calc-comparison-note">Includes ~25% revenue uplift from professional management</p>
+              <ul class="calc-breakdown" id="resultManagedBreakdown"></ul>
+              <p class="calc-uplift" id="resultUplift">+$11,543 more per year vs. self-managed</p>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary btn-lg btn-full">Get a Free Property Revenue Evaluation</a>
+          <p class="calc-disclaimer">Estimates are for illustrative purposes based on Finger Lakes market benchmarks. Actual results vary by property condition, regulations, seasonality, and listing quality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="design section" id="staging">
+    <div class="container">
+      <div class="design-grid">
+        <div class="design-image">
+          <img src="https://images.pexels.com/photos/6527075/pexels-photo-6527075.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Staged living room interior for a vacation rental" loading="lazy">
+        </div>
+        <div class="design-content">
+          <span class="section-label">Presentation</span>
+          <h2>Luxury Staging &amp; Design</h2>
+          <p>Thoughtful interior design and presentation strategies that elevate guest experience and support stronger nightly rates.</p>
+          <ul class="design-list">
+            <li>Design consulting</li>
+            <li>Furnishing guidance</li>
+            <li>Photography &amp; staging</li>
+            <li>Property analysis</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Analyze My Property</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="credibility section section-alt" id="credibility">
+    <div class="container">
+      <div class="credibility-callout">
+        <span class="section-label">Proven at Scale</span>
+        <h2>Nearly 80 Homes</h2>
+        <p class="credibility-quote">Our operating systems are informed by a high-performing luxury STR portfolio managing nearly 80 homes.</p>
+        <p class="credibility-subtext">You get the personalized attention of a local boutique manager, backed by the data, pricing algorithms, and logistics of a massive portfolio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="section-header centered">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What services does Summit & Shore provide for Finger Lakes short-term rental owners?</summary>
+          <p>Summit & Shore offers full-service short-term rental management in the Finger Lakes, including dynamic pricing, revenue management, listing optimization, guest communication, cleaning coordination, maintenance, staging, photography, and direct booking strategies. Our goal is to maximize your occupancy and nightly rates while creating a seamless, hands-off experience for property owners.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Why choose a professional short-term rental manager in the Finger Lakes?</summary>
+          <p>The Finger Lakes is a competitive vacation rental market with seasonal demand shifts, local regulations, and high guest expectations. A professional manager like Summit & Shore ensures your property stays compliant, ranks well on booking platforms, attracts high-quality guests, and earns stronger year-round revenue through data-driven strategies.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does Summit & Shore help with permitting and Finger Lakes STR regulations?</summary>
+          <p>Yes. We stay up to date with evolving short-term rental regulations across Finger Lakes municipalities and counties. Our team can guide you through the permitting process and ensure your property remains compliant and operating smoothly.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How does Summit & Shore improve occupancy and revenue?</summary>
+          <p>We use a combination of dynamic pricing tools, comp-set analysis, seasonal demand forecasting, and customized rate strategies to optimize your revenue. Beyond Airbnb and VRBO, we also drive direct bookings, run targeted SEO and marketing campaigns, and leverage multi-channel distribution to increase occupancy throughout the year.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does Summit & Shore manage mid-term rentals (30+ day stays)?</summary>
+          <p>Yes. We specialize in both short-term and mid-term rental strategies. Mid-term stays are ideal for corporate travelers, wine industry professionals, families relocating to the region, and guests seeking extended lakefront stays. These bookings help stabilize cash flow and reduce turnover costs during shoulder seasons.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How involved do I need to be as a homeowner?</summary>
+          <p>Our management is designed to be fully hands-off. We handle guest messaging, turnovers, pricing, maintenance, marketing, and calendar coordination so you can enjoy passive income without the day-to-day workload. You'll receive transparent monthly reporting and real-time visibility into your property's performance.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What makes Summit & Shore different from other STR managers?</summary>
+          <p>We focus on boutique-level service, personalized revenue strategies, and direct-booking marketing — not cookie-cutter management. Our team prioritizes property presentation, guest experience, and owner communication, ensuring your home performs as well as (or better than) the top rentals in its neighborhood. We grow your revenue while protecting your asset.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact section section-dark" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-content">
+          <h2>Ready to maximize your property's potential?</h2>
+          <p>Get a personalized revenue assessment from our Finger Lakes team. Tell us about your property and we'll show you what's possible.</p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <strong>Email</strong>
+              <a href="mailto:hello@summitandshore.com">hello@summitandshore.com</a>
+            </div>
+            <div class="contact-item">
+              <strong>Phone (Owners)</strong>
+              <a href="tel:+15855550100">(585) 555-0100</a>
+            </div>
+            <div class="contact-item">
+              <strong>Phone (Guests)</strong>
+              <a href="tel:+15855550101">(585) 555-0101</a>
+            </div>
+            <div class="contact-item">
+              <strong>Service Areas</strong>
+              <span>Seneca Lake · Cayuga Lake · Keuka Lake · Canandaigua Lake · Skaneateles Lake · Owasco Lake · Wine Country · Surrounding Countryside</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="propertyAddress">Property Address / Location</label>
+            <input type="text" id="propertyAddress" name="propertyAddress" placeholder="e.g. Canandaigua Lake, Geneva, NY" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-full">Analyze My Property</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="" class="logo-img" width="48" height="48">
+            <span class="logo-text">Summit & Shore</span>
+          </a>
+          <p>Boutique short-term rental management combining local Finger Lakes expertise with elite, proven operational systems.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="markets.html">Markets &amp; Stays</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Service Areas</h4>
+          <ul>
+            <li><a href="markets.html">Seneca Lake</a></li>
+            <li><a href="markets.html">Cayuga Lake</a></li>
+            <li><a href="markets.html">Keuka Lake</a></li>
+            <li><a href="markets.html">Canandaigua Lake</a></li>
+            <li><a href="markets.html">Skaneateles Lake</a></li>
+            <li><a href="markets.html">Owasco Lake</a></li>
+            <li><a href="markets.html">Wine Country</a></li>
+            <li><a href="markets.html">Countryside Estates</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#calculator">Property Revenue Evaluation</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>hello@summitandshore.com</p>
+          <p>(585) 555-0100</p>
+          <p>Finger Lakes Region, New York</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>All rights reserved. © 2026 Summit & Shore</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
