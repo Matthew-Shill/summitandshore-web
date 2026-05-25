@@ -1,16 +1,16 @@
 /* Summit & Shore — Finger Lakes STR Co-Hosting */
 
 :root {
-  /* Navy + gold foundation */
-  --color-navy: #08233f;
-  --color-deep: #08233f;
-  --color-navy-elevated: #0c2f4f;
+  /* Deep green + gold foundation */
+  --color-green: #085136;
+  --color-deep: #085136;
+  --color-green-elevated: #0a6844;
 
-  /* Lake identity (subtle accents only) */
-  --color-lake: #255f63;
-  --color-teal: #2b666c;
-  --color-teal-soft: rgba(37, 95, 99, 0.12);
-  --color-teal-border: rgba(43, 102, 108, 0.22);
+  /* Green accents */
+  --color-lake: #1a7a52;
+  --color-teal: #2d8a5e;
+  --color-teal-soft: rgba(8, 81, 54, 0.12);
+  --color-teal-border: rgba(8, 81, 54, 0.22);
 
   /* Premium accents */
   --color-gold: #cda85c;
@@ -23,21 +23,21 @@
   --color-sage: #6b8f71;
 
   /* Typography */
-  --color-text: #1a3348;
-  --color-text-muted: #5c6b78;
+  --color-text: #0d3d2a;
+  --color-text-muted: #5c6b65;
 
   /* RGB helpers */
-  --rgb-navy: 8, 35, 63;
-  --rgb-lake: 37, 95, 99;
-  --rgb-teal: 43, 102, 108;
+  --rgb-green: 8, 81, 54;
+  --rgb-lake: 26, 122, 82;
+  --rgb-teal: 45, 138, 94;
   --rgb-gold: 205, 168, 92;
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Outfit', system-ui, sans-serif;
 
-  --shadow-sm: 0 2px 8px rgba(var(--rgb-navy), 0.08);
-  --shadow-md: 0 8px 32px rgba(var(--rgb-navy), 0.12);
-  --shadow-lg: 0 16px 48px rgba(var(--rgb-navy), 0.16);
+  --shadow-sm: 0 2px 8px rgba(var(--rgb-green), 0.08);
+  --shadow-md: 0 8px 32px rgba(var(--rgb-green), 0.12);
+  --shadow-lg: 0 16px 48px rgba(var(--rgb-green), 0.16);
 
   --radius: 8px;
   --radius-lg: 16px;
@@ -218,7 +218,7 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
 }
 
 .header.scrolled {
-  background: rgba(var(--rgb-navy), 0.97);
+  background: rgba(var(--rgb-green), 0.97);
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow-sm);
   padding: 0.75rem 0;
@@ -239,15 +239,20 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
   flex-shrink: 0;
 }
 
-.logo-img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
+.logo-icon-wrap {
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.25));
+}
+
+.logo-icon {
+  height: 44px;
+  width: auto;
+  max-width: 98px;
+  object-fit: contain;
   display: block;
-  /* Align logo teal with Deep Lake Teal palette */
-  filter: saturate(0.9) brightness(0.94) hue-rotate(-6deg);
 }
 
 .logo-mark {
@@ -266,9 +271,12 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
 
 .logo-text {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 600;
   letter-spacing: 0.02em;
+  line-height: 1;
+  color: var(--color-gold);
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -286,7 +294,7 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
 }
 
 .nav-links a:hover {
-  color: #9dc5c8;
+  color: var(--color-gold-light);
 }
 
 .nav-links a[aria-current="page"] {
@@ -404,9 +412,9 @@ body.menu-open {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(var(--rgb-navy), 0.82) 0%,
-    rgba(var(--rgb-navy), 0.62) 55%,
-    rgba(var(--rgb-navy), 0.4) 100%
+    rgba(var(--rgb-green), 0.52) 0%,
+    rgba(var(--rgb-green), 0.38) 55%,
+    rgba(var(--rgb-green), 0.22) 100%
   );
 }
 
@@ -513,7 +521,7 @@ body.menu-open {
 
 .pillar-card {
   background: var(--color-white);
-  border: 1px solid rgba(var(--rgb-navy), 0.08);
+  border: 1px solid rgba(var(--rgb-green), 0.08);
   border-radius: var(--radius-lg);
   padding: 2rem;
   box-shadow: var(--shadow-sm);
@@ -563,7 +571,7 @@ body.menu-open {
   background: var(--color-cream);
   border-radius: var(--radius-lg);
   padding: 2.25rem 2rem;
-  border: 1px solid rgba(var(--rgb-navy), 0.06);
+  border: 1px solid rgba(var(--rgb-green), 0.06);
 }
 
 .owner-service-icon {
@@ -603,7 +611,7 @@ body.menu-open {
   background: var(--color-white);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  border: 1px solid rgba(var(--rgb-navy), 0.08);
+  border: 1px solid rgba(var(--rgb-green), 0.08);
 }
 
 .credibility-callout h2 {
@@ -1315,7 +1323,7 @@ body.menu-open {
 .property-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(var(--rgb-navy), 0.8) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(var(--rgb-green), 0.8) 0%, transparent 60%);
   display: flex;
   align-items: flex-end;
   padding: 1.5rem;
@@ -1388,7 +1396,7 @@ body.menu-open {
 }
 
 .faq-item {
-  border-bottom: 1px solid rgba(var(--rgb-navy), 0.1);
+  border-bottom: 1px solid rgba(var(--rgb-green), 0.1);
 }
 
 .faq-item summary {
@@ -1541,7 +1549,7 @@ body.menu-open {
 
 /* Footer */
 .footer {
-  background: var(--color-navy);
+  background: var(--color-green);
   color: rgba(232, 228, 220, 0.8);
   padding: 4rem 0 2rem;
 }
@@ -1555,6 +1563,15 @@ body.menu-open {
 
 .footer-brand .logo {
   margin-bottom: 1rem;
+}
+
+.footer-brand .logo-icon {
+  height: 48px;
+  filter: none;
+}
+
+.footer-brand .logo-text {
+  font-size: 1.5rem;
 }
 
 .footer-brand p {
@@ -1697,13 +1714,13 @@ body.menu-open {
     display: flex;
   }
 
-  .logo-text {
-    font-size: 1.1rem;
+  .logo-icon {
+    height: 38px;
+    max-width: 84px;
   }
 
-  .logo-img {
-    width: 40px;
-    height: 40px;
+  .logo-text {
+    font-size: 1.15rem;
   }
 
   .nav-links.open {
@@ -1970,9 +1987,9 @@ body.menu-open {
   padding: 9rem 0 4.5rem;
   background: linear-gradient(
     165deg,
-    var(--color-navy) 0%,
-    var(--color-navy-elevated) 72%,
-    #0a2a47 100%
+    var(--color-green) 0%,
+    var(--color-green-elevated) 72%,
+    #0a6844 100%
   );
   color: var(--color-sand);
   text-align: center;
@@ -2066,7 +2083,7 @@ body.menu-open {
 
 .revenue-standalone .revenue-stat {
   background: var(--color-white);
-  border: 1px solid rgba(var(--rgb-navy), 0.08);
+  border: 1px solid rgba(var(--rgb-green), 0.08);
   box-shadow: var(--shadow-sm);
 }
 
@@ -2085,7 +2102,7 @@ body.menu-open {
   border-radius: var(--radius-lg);
   padding: 1.75rem;
   box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(var(--rgb-navy), 0.06);
+  border: 1px solid rgba(var(--rgb-green), 0.06);
   transition: var(--transition);
 }
 
