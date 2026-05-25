@@ -248,7 +248,7 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
 }
 
 .logo-icon {
-  height: 47px;
+  height: 42px;
   width: auto;
   max-width: none;
   object-fit: contain;
@@ -1572,7 +1572,7 @@ body.menu-open {
 }
 
 .footer-brand .logo-icon {
-  height: 48px;
+  height: 44px;
   filter: none;
 }
 
@@ -1738,11 +1738,11 @@ body.menu-open {
   }
 
   .logo-icon {
-    height: 41px;
+    height: 38px;
   }
 
   .footer-brand .logo-icon {
-    height: 40px;
+    height: 36px;
   }
 
   .logo-text {
