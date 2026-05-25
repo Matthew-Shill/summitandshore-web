@@ -13,19 +13,20 @@ document.addEventListener('DOMContentLoaded', () => {
     header.classList.toggle('scrolled', window.scrollY > 60);
   });
 
+  const setMobileMenuOpen = (open) => {
+    navLinks.classList.toggle('open', open);
+    header.classList.toggle('menu-open', open);
+    navToggle.classList.toggle('active', open);
+    document.body.classList.toggle('menu-open', open);
+  };
+
   // Mobile navigation
   navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    header.classList.toggle('menu-open');
-    navToggle.classList.toggle('active');
+    setMobileMenuOpen(!navLinks.classList.contains('open'));
   });
 
   navLinks.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      header.classList.remove('menu-open');
-      navToggle.classList.remove('active');
-    });
+    link.addEventListener('click', () => setMobileMenuOpen(false));
   });
 
   // Scroll reveal animations

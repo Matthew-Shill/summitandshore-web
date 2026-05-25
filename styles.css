@@ -342,6 +342,8 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
   border: none;
   cursor: pointer;
   padding: 4px;
+  position: relative;
+  z-index: 1002;
 }
 
 .nav-toggle span {
@@ -350,6 +352,22 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
   height: 2px;
   background: var(--color-white);
   transition: var(--transition);
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+body.menu-open {
+  overflow: hidden;
 }
 
 /* Hero */
@@ -1589,25 +1607,31 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
   transform: translateY(0);
 }
 
-/* Responsive */
+/* Responsive — tablet */
 @media (max-width: 1024px) {
   .intro-grid,
-  .pillars-grid,
-  .owner-services-grid,
   .cta-banner-grid,
   .hybrid-grid,
   .design-grid,
   .calculator-panel,
   .calc-comparison,
-  .revenue-stats-row,
   .about-grid,
-  .contact-grid {
+  .contact-grid,
+  .revenue-standalone-grid,
+  .philosophy-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 
+  .pillars-grid,
+  .owner-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
   .revenue-stats-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
   }
 
   .features-grid {
@@ -1615,11 +1639,12 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
   }
 
   .properties-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
 
   .intro-image img,
@@ -1629,9 +1654,40 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
   .cta-banner-image img {
     height: 360px;
   }
+
+  .page-hero {
+    padding: 8rem 0 4rem;
+  }
+
+  .credibility-callout {
+    padding: 2.5rem 2rem;
+  }
+
+  .calculator-form,
+  .calculator-results {
+    padding: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.78rem;
+  }
+
+  .nav-cta.btn {
+    padding: 0.65rem 1.15rem;
+    font-size: 0.75rem;
+  }
 }
 
+/* Responsive — mobile */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
   .nav-links,
   .nav-cta {
     display: none;
@@ -1639,6 +1695,15 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
 
   .nav-toggle {
     display: flex;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+  }
+
+  .logo-img {
+    width: 40px;
+    height: 40px;
   }
 
   .nav-links.open {
@@ -1650,9 +1715,15 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
     right: 0;
     bottom: 0;
     background: var(--color-deep);
-    padding: 5rem 2rem 2rem;
-    gap: 1.5rem;
+    padding: 5rem 1.5rem 7rem;
+    gap: 1.25rem;
     z-index: 999;
+    overflow-y: auto;
+  }
+
+  .nav-links.open a {
+    font-size: 1.05rem;
+    padding: 0.25rem 0;
   }
 
   .nav-links.open .nav-dropdown .dropdown-menu {
@@ -1677,6 +1748,59 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
     left: 50%;
     transform: translateX(-50%);
     z-index: 1001;
+    width: calc(100% - 2.5rem);
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-content {
+    padding: 6.5rem 0 5rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  .pillars-grid,
+  .owner-services-grid,
+  .revenue-stats-row {
+    grid-template-columns: 1fr;
+    margin-top: 2.5rem;
+  }
+
+  .pillars-grid {
+    margin-top: 2.5rem;
+  }
+
+  .owner-services-grid {
+    margin-top: 0;
   }
 
   .properties-grid {
@@ -1686,6 +1810,10 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .footer {
+    padding: 3rem 0 1.5rem;
   }
 
   .form-row {
@@ -1700,8 +1828,140 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
     grid-template-columns: 1fr 1fr;
   }
 
+  .calc-comparison-amount {
+    font-size: 1.5rem;
+  }
+
+  .calc-breakdown li {
+    flex-wrap: wrap;
+  }
+
+  .calc-breakdown li span:last-child {
+    white-space: normal;
+  }
+
   .section {
     padding: 3.5rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
+  }
+
+  .page-hero {
+    padding: 7rem 0 3rem;
+  }
+
+  .page-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .page-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .page-cta-actions .btn {
+    width: 100%;
+  }
+
+  .credibility-callout {
+    padding: 2rem 1.25rem;
+  }
+
+  .credibility-quote {
+    font-size: 1.1rem;
+  }
+
+  .intro-image img,
+  .hybrid-image img,
+  .design-image img,
+  .about-image img,
+  .cta-banner-image img {
+    height: 260px;
+  }
+
+  .feature-image {
+    height: 180px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .revenue-stats-row .revenue-stat {
+    min-height: auto;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .calculator-form,
+  .calculator-results,
+  .contact-form {
+    padding: 1.25rem;
+  }
+
+  .contact-grid {
+    gap: 2rem;
+  }
+
+  .faq-item summary {
+    font-size: 0.98rem;
+    padding: 1rem 0;
+  }
+
+  .markets-areas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-lg {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsive — small phones */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 2.15rem;
+  }
+
+  .hero-content {
+    padding-top: 6rem;
+  }
+
+  .calc-result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calc-slider-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .calc-slider-value {
+    font-size: 1.1rem;
+  }
+
+  .owner-service-card,
+  .pillar-card {
+    padding: 1.5rem;
+  }
+
+  .property-overlay span {
+    font-size: 1.25rem;
   }
 }
 
@@ -1864,19 +2124,3 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); }
   margin-bottom: 1rem;
 }
 
-@media (max-width: 1024px) {
-  .revenue-standalone-grid,
-  .philosophy-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 900px) {
-  .nav-links {
-    gap: 1rem;
-  }
-
-  .nav-links a {
-    font-size: 0.8rem;
-  }
-}
