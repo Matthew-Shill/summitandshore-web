@@ -445,13 +445,21 @@ body.menu-open {
   margin-bottom: 1.5rem;
 }
 
+.hero h1:has(+ .hero-eyebrow) {
+  margin-bottom: 0;
+}
+
+.hero h1 + .hero-eyebrow {
+  margin-top: 3.25rem;
+  margin-bottom: 0.75rem;
+}
+
 .hero-subtitle {
-  font-size: 1.45rem;
-  font-weight: 500;
-  color: var(--color-gold);
-  max-width: 640px;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
   margin: 0 auto 2.5rem;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .hero-actions {
@@ -1834,10 +1842,14 @@ body.menu-open {
     margin-bottom: 1rem;
   }
 
+  .hero h1 + .hero-eyebrow {
+    margin-top: 2.5rem;
+    margin-bottom: 0.65rem;
+  }
+
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     margin-bottom: 2rem;
-    line-height: 1.65;
   }
 
   .hero-actions {
