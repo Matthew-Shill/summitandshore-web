@@ -446,11 +446,12 @@ body.menu-open {
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 600px;
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--color-gold);
+  max-width: 640px;
   margin: 0 auto 2.5rem;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 .hero-actions {
@@ -1834,7 +1835,7 @@ body.menu-open {
   }
 
   .hero-subtitle {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
     line-height: 1.65;
   }
