@@ -93,17 +93,31 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = contactForm.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
-      btn.textContent = 'Thank you! We\'ll be in touch.';
       btn.disabled = true;
-      setTimeout(() => {
+      btn.textContent = 'Sending…';
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/Justin@summitandshore.co', {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' },
+        });
+        if (!response.ok) throw new Error('Form submission failed');
+
+        btn.textContent = 'Thank you! We\'ll be in touch.';
         contactForm.reset();
-        btn.textContent = originalText;
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.disabled = false;
+        }, 3000);
+      } catch {
+        btn.textContent = 'Could not send — please email Justin@summitandshore.co';
         btn.disabled = false;
-      }, 3000);
+      }
     });
   }
 
