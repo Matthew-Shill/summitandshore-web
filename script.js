@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.disabled = true;
       btn.textContent = 'Sending…';
 
-      const calendlyTab = window.open('', '_blank', 'noopener,noreferrer');
+      window.open(CALENDLY_BOOKING_URL, '_blank', 'noopener,noreferrer');
 
       try {
         const response = await fetch('https://formsubmit.co/ajax/Justin@summitandshore.co', {
@@ -113,12 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         if (!response.ok) throw new Error('Form submission failed');
 
-        if (calendlyTab) {
-          calendlyTab.location.href = CALENDLY_BOOKING_URL;
-        } else {
-          window.open(CALENDLY_BOOKING_URL, '_blank', 'noopener,noreferrer');
-        }
-
         btn.textContent = 'Thank you! We\'ll be in touch.';
         contactForm.reset();
         setTimeout(() => {
@@ -126,7 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
           btn.disabled = false;
         }, 3000);
       } catch {
-        calendlyTab?.close();
         btn.textContent = 'Could not send — please email Justin@summitandshore.co';
         btn.disabled = false;
       }
