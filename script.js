@@ -9,28 +9,43 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.getElementById('navLinks');
   const contactForm = document.getElementById('contactForm');
 
-  if (!navToggle || !navLinks) return;
+  if (header && navToggle && navLinks) {
+    // Sticky header on scroll
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
 
-  // Sticky header on scroll
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 60);
-  });
+    const setMobileMenuOpen = (open) => {
+      navLinks.classList.toggle('open', open);
+      header.classList.toggle('menu-open', open);
+      navToggle.classList.toggle('active', open);
+      document.body.classList.toggle('menu-open', open);
+    };
 
-  const setMobileMenuOpen = (open) => {
-    navLinks.classList.toggle('open', open);
-    header.classList.toggle('menu-open', open);
-    navToggle.classList.toggle('active', open);
-    document.body.classList.toggle('menu-open', open);
-  };
+    // Mobile navigation
+    navToggle.addEventListener('click', () => {
+      setMobileMenuOpen(!navLinks.classList.contains('open'));
+    });
 
-  // Mobile navigation
-  navToggle.addEventListener('click', () => {
-    setMobileMenuOpen(!navLinks.classList.contains('open'));
-  });
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMobileMenuOpen(false));
+    });
 
-  navLinks.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => setMobileMenuOpen(false));
-  });
+    // Smooth scroll for same-page anchor links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          const headerHeight = header.offsetHeight;
+          const top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  }
 
   // Scroll reveal animations
   const observerOptions = {
@@ -59,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.hybrid-image',
     '.design-content',
     '.design-image',
+    '.visual-card',
     '.pillar-card',
     '.owner-service-card',
     '.credibility-callout',
@@ -74,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.about-content',
     '.faq-item',
     '.contact-content',
+    '.assessment-steps',
     '.contact-form',
     '.page-hero-inner',
     '.page-cta-inner',
@@ -125,21 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-  // Smooth scroll for same-page anchor links
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      const target = document.querySelector(targetId);
-      if (target) {
-        e.preventDefault();
-        const headerHeight = header.offsetHeight;
-        const top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
-    });
-  });
 
   initPropertyCalculator();
 });

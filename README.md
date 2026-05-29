@@ -26,6 +26,22 @@ If you see “This page isn’t working” in Chrome:
 2. Use `http://127.0.0.1:8080` — not `https://`.
 3. Stay in the `summit-and-shore` folder when you start the server.
 
+**This is a static site — there is no `npm run dev`.** Use `./preview.sh` or Python’s built-in server only.
+
+**Port 8080 stuck or “empty reply”?** Another process may be holding the port without serving files. Fix:
+
+```bash
+# Stop whatever is on 8080 (replace PID if lsof shows a different one)
+lsof -i :8080 -sTCP:LISTEN
+kill <PID>
+
+# Or use another port
+python3 -m http.server 5500
+# → http://127.0.0.1:5500
+```
+
+`./preview.sh` automatically tries 8080, then 5500, 3000, and 8888 if a port is busy or broken.
+
 ## Site structure
 
 | Page | File | Purpose |
