@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.about-content',
     '.faq-item',
     '.contact-content',
+    '.contact-prelude',
     '.contact-form',
     '.page-hero-inner',
     '.page-cta-inner',
