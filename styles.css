@@ -2042,7 +2042,7 @@ body.menu-open {
 }
 
 .contact-prelude-title {
-  margin: 0 0 1.1rem;
+  margin: 0 0 0.75rem;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -2051,50 +2051,12 @@ body.menu-open {
   text-align: center;
 }
 
-.contact-prelude-steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  list-style: none;
+.contact-prelude-body {
   margin: 0;
-  padding: 0;
-}
-
-.contact-prelude-steps li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
   text-align: center;
-  padding: 0 0.75rem;
-}
-
-.contact-prelude-steps li:not(:last-child) {
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.contact-prelude-num {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  font-family: var(--font-display);
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--color-deep);
-  background: var(--color-gold);
-  line-height: 1;
-}
-
-.contact-prelude-text {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.88);
-  line-height: 1.35;
 }
 
 .contact-form {
@@ -2616,23 +2578,8 @@ body.menu-open {
     gap: 2rem;
   }
 
-  .contact-prelude-steps {
-    grid-template-columns: 1fr;
-    gap: 0.65rem;
-  }
-
-  .contact-prelude-steps li {
-    flex-direction: row;
-    justify-content: flex-start;
-    text-align: left;
-    padding: 0.5rem 0;
-    border-right: none !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .contact-prelude-steps li:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+  .contact-prelude-body {
+    font-size: 0.95rem;
   }
 
   .faq-item summary {
