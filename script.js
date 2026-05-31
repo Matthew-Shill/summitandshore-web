@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const animateSelectors = [
     '.intro-content',
     '.intro-image',
+    '.intro-cta',
     '.section-header',
     '.service-card',
     '.feature-card',

@@ -448,14 +448,16 @@ body.menu-open {
 }
 
 .hero-eyebrow {
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  line-height: 1.65;
   margin-bottom: 1.5rem;
-  max-width: 36ch;
+  max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .hero h1 {
@@ -529,8 +531,16 @@ body.menu-open {
   max-width: 52ch;
 }
 
-.intro-content .btn {
-  margin-top: 2rem;
+.intro-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+}
+
+.intro-cta-btn {
+  padding: 1.2rem 3rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
 }
 
 .intro-image {
@@ -2403,9 +2413,11 @@ body.menu-open {
   }
 
   .hero-eyebrow {
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
     margin-bottom: 1rem;
+    max-width: 100%;
+    padding: 0 0.25rem;
   }
 
   .hero h1 + .hero-eyebrow {
@@ -2439,6 +2451,16 @@ body.menu-open {
 
   .intro .visual-story {
     margin-top: 2.5rem;
+  }
+
+  .intro-cta {
+    margin-top: 2.5rem;
+  }
+
+  .intro-cta-btn {
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
   }
 
   .owner-services-grid {
