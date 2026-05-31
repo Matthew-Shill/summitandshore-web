@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.hybrid-image',
     '.design-content',
     '.design-image',
-    '.visual-card',
+    '.advantage-simple-card',
     '.pillar-card',
     '.owner-service-card',
     '.credibility-callout',

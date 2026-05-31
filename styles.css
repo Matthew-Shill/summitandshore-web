@@ -606,16 +606,44 @@ body.menu-open {
   line-height: 1.6;
 }
 
-/* Visual storytelling */
-.visual-story {
+/* Strategic advantage — simple cards */
+.advantage-cards-simple {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.75rem;
   align-items: stretch;
+  margin-top: 4.5rem;
 }
 
-.intro .visual-story {
-  margin-top: 4.5rem;
+.advantage-simple-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border: 1px solid rgba(var(--rgb-green), 0.08);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advantage-simple-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.advantage-simple-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(var(--rgb-green), 0.08);
+}
+
+.advantage-simple-card p {
+  color: var(--color-text-muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  margin: 0;
+  flex-grow: 1;
 }
 
 .visual-card {
@@ -2194,15 +2222,11 @@ body.menu-open {
     height: 320px;
   }
 
-  .visual-story,
+  .advantage-cards-simple,
   .pillars-grid,
   .owner-services-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-  }
-
-  .visual-card--presentation {
-    grid-column: 1 / -1;
   }
 
   .revenue-stats-row {
@@ -2377,15 +2401,11 @@ body.menu-open {
     max-width: 100%;
   }
 
-  .visual-story,
+  .advantage-cards-simple,
   .pillars-grid,
   .owner-services-grid,
   .revenue-stats-row {
     grid-template-columns: 1fr;
-    margin-top: 2.5rem;
-  }
-
-  .intro .visual-story {
     margin-top: 2.5rem;
   }
 
