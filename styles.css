@@ -553,6 +553,7 @@ body.menu-open {
   width: 100%;
   height: 480px;
   object-fit: cover;
+  object-position: center 42%;
 }
 
 /* Shared pillar cards (services, about) */
@@ -1994,79 +1995,6 @@ body.menu-open {
   gap: 1.25rem;
 }
 
-.assessment-steps {
-  padding: 1.25rem 1.35rem 1.35rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-lg);
-}
-
-.assessment-steps-label {
-  margin: 0 0 1rem;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-gold);
-  text-align: center;
-}
-
-.assessment-steps-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.assessment-steps-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.65rem;
-  padding: 0.85rem 0.5rem 0.75rem;
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.assessment-steps-num {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--color-deep);
-  background: var(--color-gold);
-  line-height: 1;
-}
-
-.assessment-steps-copy {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.assessment-steps-copy strong {
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.assessment-steps-copy span {
-  font-size: 0.75rem;
-  line-height: 1.45;
-  color: rgba(232, 228, 220, 0.65);
-}
-
 .contact-form {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -2295,12 +2223,20 @@ body.menu-open {
     gap: 2rem;
   }
 
-  .intro-image img,
   .hybrid-image img,
   .design-image img,
   .about-image img,
   .cta-banner-image img {
     height: 360px;
+  }
+
+  .intro .intro-image img {
+    height: auto;
+    aspect-ratio: 16 / 10;
+    max-height: 420px;
+    min-height: 280px;
+    object-fit: cover;
+    object-position: center 38%;
   }
 
   .page-hero {
@@ -2467,21 +2403,6 @@ body.menu-open {
     margin-top: 0;
   }
 
-  .assessment-steps-list {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
-  .assessment-steps-item {
-    flex-direction: row;
-    text-align: left;
-    padding: 0.75rem 0.85rem;
-  }
-
-  .assessment-steps-copy {
-    align-items: flex-start;
-  }
-
   .visual-card-headline {
     font-size: 1.2rem;
   }
@@ -2564,12 +2485,18 @@ body.menu-open {
     font-size: 1.1rem;
   }
 
-  .intro-image img,
   .hybrid-image img,
   .design-image img,
   .about-image img,
   .cta-banner-image img {
     height: 260px;
+  }
+
+  .intro .intro-image img {
+    aspect-ratio: 3 / 2;
+    max-height: 340px;
+    min-height: 220px;
+    object-position: center center;
   }
 
   .feature-image {
