@@ -19,7 +19,10 @@ OUTPUT = Path("images/logo-icon.png")
 
 
 def is_logo_pixel(r: int, g: int, b: int) -> bool:
+    """Detect gold/bronze logo pixels (new assets are gold on black)."""
     if r > 120 and g > 90 and b < 130 and r >= g:
+        return True
+    if r > 100 and g > 70 and b < 100 and (r - b) > 30:
         return True
     if r > 180 and g > 180 and b > 180:
         return True
@@ -54,7 +57,11 @@ def main() -> None:
     print(f"Using {SOURCE}")
     icon = remove_background(Image.open(SOURCE))
     icon.save(OUTPUT, "PNG")
+    # Also write header variant
+    header_output = Path("images/logo-header.png")
+    icon.save(header_output, "PNG")
     print(f"Wrote {OUTPUT} ({icon.size[0]}×{icon.size[1]})")
+    print(f"Wrote {header_output}")
 
 
 if __name__ == "__main__":
