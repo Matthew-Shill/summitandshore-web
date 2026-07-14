@@ -46,18 +46,19 @@ python3 -m http.server 5500
 
 | Page | File | Purpose |
 |------|------|---------|
-| Home | `index.html` | Owner-focused conversion — hero, co-hosting, strategic advantage, staging, FAQ, contact (revenue calculator preserved as internal-only) |
-| Presentation | `presentation.html` | Editorial staging & design framework (copy TBD) |
-| Services | `services.html` | Co-hosting pillars — revenue, guest experience, presentation, owner partnership, local ops |
-| Markets & Stays | `markets.html` | Guest browsing — properties, lakes, book a stay |
-| About | `about.html` | Company story, hosts, philosophy |
+| Home | `index.html` | Owner-focused conversion — hero, co-hosting, advantage, staging, FAQ, contact (revenue calculator preserved as internal-only) |
+| Services | `services.html` | Co-hosting pillars — presentation, revenue, guest experience, local ops |
+| Our Region | `our-region.html` | Story, vision, and Finger Lakes service corridors |
+| Privacy | `privacy.html` | Privacy Policy |
+| Terms | `terms.html` | Terms of Service |
 
-Shared assets: `styles.css`, `script.js`, `images/`
+Redirect stubs (noindex): `about.html` and `markets.html` → `our-region.html`; `presentation.html` → `services.html#design-showcase`.
+
+Shared assets: `styles.css`, `script.js`, `images/`, `robots.txt`, `sitemap.xml`, `favicon.png`, `apple-touch-icon.png`
 
 ## Customize
 
-- Replace placeholder phone numbers and `hello@summitandshore.com` with real contact info
-- Swap placeholder images for your own property photos
+- Swap property photos in `images/` and update `src` paths in HTML as needed
 - **Logo icon:** Save your mountain mark (no text) as `images/logo-icon-source.png`, then run `python3 scripts/prepare-logo-icon.py` and copy to `images/logo-header.png`. Header/footer show the mark plus “Summit & Shore” in HTML.
 - **Internal revenue tool:** Calculator markup lives in `index.html` with class `internal-only` (hidden from public). Remove that class to expose it again.
-- Connect the contact form to your CRM or form backend
+- Contact form posts via FormSubmit to `Justin@summitandshore.co`
