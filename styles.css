@@ -2318,6 +2318,35 @@ body.menu-open {
   max-width: 280px;
 }
 
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid rgba(232, 228, 220, 0.25);
+  border-radius: 50%;
+  color: rgba(232, 228, 220, 0.85);
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.footer-social-link:hover {
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+  background: rgba(205, 168, 92, 0.1);
+}
+
+.footer-social-link svg {
+  width: 1rem;
+  height: 1rem;
+}
+
 .footer-links h4,
 .footer-contact h4 {
   font-family: var(--font-body);
